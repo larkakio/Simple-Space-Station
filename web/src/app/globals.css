@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+:root {
+  --background: #030508;
+  --foreground: #e8f4ff;
+  --neon-cyan: #00ffd1;
+  --neon-magenta: #ff00aa;
+  --neon-lime: #b4ff00;
+  --neon-amber: #ffb020;
+  color-scheme: dark;
+}
+
+/* Paint the full canvas (avoids white viewport behind transparent layers in mobile devtools). */
+html {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+html,
+body {
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.65;
+  }
+}
+
+body {
+  background-color: var(--background);
+  background-image: none;
+  color: var(--foreground);
+  min-height: 100dvh;
+}
+
+.safe-area-pt {
+  padding-top: env(safe-area-inset-top);
+}
+
+.safe-area-pb {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.honeycomb-bg {
+  background-color: #030508;
+  background-image:
+    linear-gradient(
+      30deg,
+      rgba(0, 255, 209, 0.04) 12%,
+      transparent 12.5%,
+      transparent 87%,
+      rgba(0, 255, 209, 0.04) 87.5%,
+      rgba(0, 255, 209, 0.04)
+    ),
+    linear-gradient(
+      150deg,
+      rgba(255, 0, 170, 0.03) 12%,
+      transparent 12.5%,
+      transparent 87%,
+      rgba(255, 0, 170, 0.03) 87.5%,
+      rgba(255, 0, 170, 0.03)
+    ),
+    linear-gradient(
+      30deg,
+      transparent 49%,
+      rgba(180, 255, 0, 0.02) 50%,
+      transparent 51%
+    ),
+    radial-gradient(
+      ellipse 80% 50% at 50% -20%,
+      rgba(0, 255, 209, 0.12),
+      transparent 55%
+    );
+  background-size:
+    24px 42px,
+    24px 42px,
+    48px 84px,
+    100% 100%;
+}
+
+.scanlines {
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 255, 209, 0.03) 2px,
+    rgba(0, 255, 209, 0.03) 3px
+  );
+}
