@@ -1,12 +1,13 @@
 export const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  "https://simple-space-station.vercel.app";
 
 export const targetChainId = Number(
   process.env.NEXT_PUBLIC_CHAIN_ID ?? "8453",
 );
 
 export const baseAppId =
-  process.env.NEXT_PUBLIC_BASE_APP_ID ?? "simple-space-station";
+  process.env.NEXT_PUBLIC_BASE_APP_ID ?? "69df3e6e6d8c62b41bf7a38d";
 
 export const checkInContractAddress = (
   process.env.NEXT_PUBLIC_CHECK_IN_CONTRACT_ADDRESS ?? ""
